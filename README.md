@@ -1,4 +1,4 @@
-# Relational-DBMS: A Comprehensive Guide
+# Relational-DBMS:
 
 ## Overview
 
@@ -39,7 +39,7 @@
 ### Initial Setup
 
 1. **Clone the Repository**: Get the project onto your local machine.
-2. **Prerequisites**: Ensure Node.js is installed.
+2. **Prerequisites**: Ensure Node.js and Python is installed.
 
 ### Installation and Execution
 
