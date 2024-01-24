@@ -19,4 +19,4 @@ def generate_sales_data(filename, num_rows):
             writer.writerow([sale_id, product_id, date, quantity, total_price])
 
 # Generate 100 rows of sales data
-generate_sales_data('sales.csv', 100)
+generate_sales_data('sales.csv', 10000)

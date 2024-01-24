@@ -20,4 +20,4 @@ def generate_employee_data(filename, num_rows):
             writer.writerow([eid, name, age, gender, department, salary])
 
 # Generate 100 rows of employee data
-generate_employee_data('employees.csv', 100)
+generate_employee_data('employees.csv', 10000)

@@ -19,4 +19,4 @@ def generate_product_data(filename, num_rows):
             writer.writerow([product_id, product_name, category, price, quantity])
 
 # Generate 100 rows of product data
-generate_product_data('products.csv', 100)
+generate_product_data('products.csv', 10000)

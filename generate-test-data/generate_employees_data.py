@@ -17,7 +17,7 @@ with open('employees_data.csv', mode='w', newline='') as file:
                      "StartDate", "Ethnicity", "MaritalStatus", "Education", "Experience"])
 
     # Generate data for 100 more employees
-    for i in range(1, 7):
+    for i in range(1, 10000):
         eid = f"E{i}"
         name = f"Employee {i}"
         age = random.randint(22, 65)
