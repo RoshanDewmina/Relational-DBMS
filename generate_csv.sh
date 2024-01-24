@@ -1,18 +1,17 @@
 #!/bin/bash
 
-# To use this script:
-
-# Save it as generate_csv.sh in your main folder.
-# Give it execute permissions: Run chmod +x generate_csv.sh in your terminal.
-# Execute the script: Run ./generate_csv.sh.
-
-
 # Navigate to the generate-test-data directory
 cd generate-test-data
 
-# Clear existing CSV files in the csv directory
-rm -rf ../csv/*
-echo "Old CSV files removed."
+# Check if the csv directory exists, create it if it doesn't
+if [ ! -d "../csv" ]; then
+    echo "Creating csv directory..."
+    mkdir ../csv
+else
+    # Clear existing CSV files in the csv directory
+    echo "Removing old CSV files..."
+    rm -rf ../csv/*
+fi
 
 # Run each Python script to generate new CSV files
 echo "Generating new CSV files..."
