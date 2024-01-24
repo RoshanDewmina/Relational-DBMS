@@ -118,7 +118,13 @@
    npm install
    ```
 
-2. **Generate CSV Files**:
+2. **Give Permissions**:
+
+   ```bash
+   chmod +x generate_csv.sh
+   ```
+
+3. **Generate CSV Files**:
 
    ```bash
    ./generate_csv.sh
@@ -126,7 +132,7 @@
 
    This script prepares test CSV files for querying.
 
-3. **Launch the Processor**:
+2. **Launch the Processor**:
 
    ```bash
    npm run db-init
