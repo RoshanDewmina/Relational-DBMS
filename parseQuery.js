@@ -39,17 +39,16 @@ const parseQuery = (query) => {
     const pattern = /cartesianProduct\s+(\S+)\s+(\S+)$/i;
     const match = pattern.exec(query);
     if (match) {
-        const table1 = match[1].trim();
-        const table2 = match[2].trim();
-        return {
-            operation: "cartesianProduct",
-            tables: [table1, table2]
-        };
+      const table1 = match[1].trim();
+      const table2 = match[2].trim();
+      return {
+        operation: "cartesianProduct",
+        tables: [table1, table2],
+      };
     } else {
-        throw new Error("Invalid query format for cartesianProduct operation");
+      throw new Error("Invalid query format for cartesianProduct operation");
     }
-}
- else if (query.toLowerCase().startsWith("innerjoin")) {
+  } else if (query.toLowerCase().startsWith("innerjoin")) {
     const pattern = /innerJoin\s+(.*?)\s+(.*?)\s+on\s+(.*)$/i;
     const match = pattern.exec(query);
     if (match) {
@@ -187,35 +186,44 @@ const parseQuery = (query) => {
       throw new Error("Invalid query format for groupBy operation");
     }
   } else if (query.toLowerCase().startsWith("having")) {
-    const pattern = /having\s+(.*?)\((.*?)\)$/i;
+    const pattern = /having\s+(.*?)\s+groupBy\s+(.*?)\((.*?)\)/i;
     const match = pattern.exec(query);
     if (match) {
       const conditionStr = match[1].trim();
-      const tableName = match[2].trim();
+      const groupAttributes = match[2].split(",").map(attr => attr.trim());
+      const tableName = match[3].trim();
       const condition = new Function("group", `return ${conditionStr}`);
+  
       return {
         operation: "having",
         tableName: tableName,
+        groupAttributes: groupAttributes,
         params: condition,
       };
     } else {
       throw new Error("Invalid query format for having operation");
     }
-  } else if (query.toLowerCase().startsWith("rename")) {
-    const pattern = /rename\s+(\S+)\s+(\S+)\s+(\S+)$/i;
+  }
+   else if (query.toLowerCase().startsWith("rename")) {
+    const pattern = /rename\s+(\w+)\s+as\s+(\w+)\((.*?)\)/i;
     const match = pattern.exec(query);
     if (match) {
       const oldName = match[1].trim();
       const newName = match[2].trim();
       const tableName = match[3].trim();
+
       return {
         operation: "rename",
         tableName: tableName,
-        params: { [oldName]: newName },
+        params: {
+          [oldName]: newName,
+        },
       };
     } else {
       throw new Error("Invalid query format for rename operation");
     }
+  } else {
+    throw new Error("Invalid query format for rename operation");
   }
 };
 

@@ -192,16 +192,33 @@ function executeQuery(allData, parsedQuery) {
 
     // Handling single-relation operations
     case "count":
+      data = allData[parsedQuery.tableName];
+      if (!data) {
+        throw new Error(`Data for table '${parsedQuery.tableName}' not found`);
+      }
       return count(data, parsedQuery.params);
+
     case "groupBy":
+      data = allData[parsedQuery.tableName];
+      if (!data) {
+        throw new Error(`Data for table '${parsedQuery.tableName}' not found`);
+      }
       return groupBy(data, parsedQuery.params);
+
     case "having":
-      const havingCondition = new Function(
-        "group",
-        `return ${parsedQuery.params}`
-      );
-      return having(data, havingCondition);
+      data = allData[parsedQuery.tableName];
+      if (!data) {
+        throw new Error(`Data for table '${parsedQuery.tableName}' not found`);
+      }
+      // Group the data first before applying the having condition
+      const groupedData = groupBy(data, parsedQuery.groupAttributes);
+      return having(groupedData, parsedQuery.params);
+
     case "rename":
+      data = allData[parsedQuery.tableName];
+      if (!data) {
+        throw new Error(`Data for table '${parsedQuery.tableName}' not found`);
+      }
       return rename(data, parsedQuery.params);
 
     default:
@@ -248,5 +265,5 @@ rl.question(
         console.error("Error:", error); // Handling errors
         rl.close(); // Closing the readline interface on error
       });
-   });
-   
+  }
+);
