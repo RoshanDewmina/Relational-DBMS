@@ -1,0 +1,7 @@
+EID,Name,Age,Gender,Position,Department,Salary,Email,Phone,Address,StartDate,Ethnicity,MaritalStatus,Education,Experience
+E1,Employee 1,64,Male,Software Engineer,Finance,78041,employee1@example.com,796-597-6123,612 Oak St,2021-03-15,Caucasian,Married,Ph.D.,3
+E2,Employee 2,22,Male,UI/UX Designer,Design,97507,employee2@example.com,527-324-2772,996 Cedar St,2021-03-10,Asian,Divorced,Bachelor's,8
+E3,Employee 3,43,Female,Software Engineer,Finance,73025,employee3@example.com,301-264-4484,884 Oak St,2023-07-23,Hispanic,Divorced,Master's,2
+E4,Employee 4,45,Male,UI/UX Designer,Product Management,69942,employee4@example.com,969-923-3186,384 Pine St,2019-01-12,African American,Divorced,Ph.D.,11
+E5,Employee 5,65,Female,Data Scientist,Engineering,96423,employee5@example.com,614-126-2837,96 Main St,2016-06-01,Asian,Married,Bachelor's,10
+E6,Employee 6,56,Female,Product Manager,Finance,83252,employee6@example.com,766-139-8763,860 Oak St,2016-12-06,Hispanic,Divorced,Ph.D.,0
