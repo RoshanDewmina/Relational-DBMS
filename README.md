@@ -115,15 +115,18 @@
    ```bash
    npm install
    ```
+
 2. **Install Python Dependencies**:
 
    ```bash
    pip install faker
    ```
-   or 
-```bash
+
+   or
+
+   ```bash
    pip3 install faker
-```
+   ```
 
 3. **Give Permissions**:
 
