@@ -118,7 +118,13 @@
    npm install
    ```
 
-2. **Generate CSV Files**:
+2. **Give Permissions**:
+
+   ```bash
+   chmod +x generate_csv.sh
+   ```
+
+3. **Generate CSV Files**:
 
    ```bash
    ./generate_csv.sh
@@ -126,7 +132,7 @@
 
    This script prepares test CSV files for querying.
 
-3. **Launch the Processor**:
+2. **Launch the Processor**:
 
    ```bash
    npm run db-init
@@ -139,9 +145,3 @@
 1. **CSV File Paths**: When prompted, enter the paths to your CSV files, separated by commas.
 2. **Enter Your Query**: Type in your relational algebra query following the prompt.
 3. **Results**: Hit enter to execute and view the results of your query.
-
-## Tips
-
-- Familiarize yourself with basic relational algebra concepts to maximize the utility of this tool.
-- Carefully format your queries according to relational algebra syntax for accurate results.
-- Ensure that your CSV files are formatted correctly to avoid errors.
