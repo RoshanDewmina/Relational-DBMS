@@ -145,9 +145,3 @@
 1. **CSV File Paths**: When prompted, enter the paths to your CSV files, separated by commas.
 2. **Enter Your Query**: Type in your relational algebra query following the prompt.
 3. **Results**: Hit enter to execute and view the results of your query.
-
-## Tips
-
-- Familiarize yourself with basic relational algebra concepts to maximize the utility of this tool.
-- Carefully format your queries according to relational algebra syntax for accurate results.
-- Ensure that your CSV files are formatted correctly to avoid errors.
