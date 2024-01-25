@@ -117,14 +117,23 @@
    ```bash
    npm install
    ```
+2. **Install Python Dependencies**:
 
-2. **Give Permissions**:
+   ```bash
+   pip install faker
+   ```
+   or 
+```bash
+   pip3 install faker
+```
+
+3. **Give Permissions**:
 
    ```bash
    chmod +x generate_csv.sh
    ```
 
-3. **Generate CSV Files**:
+4. **Generate CSV Files**:
 
    ```bash
    ./generate_csv.sh
@@ -132,7 +141,7 @@
 
    This script prepares test CSV files for querying.
 
-2. **Launch the Processor**:
+5. **Launch the Processor**:
 
    ```bash
    npm run db-init
