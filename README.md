@@ -4,12 +4,10 @@
 
 **Relational-DBMS** is an  relational algebra query processor designed for efficient database querying and manipulation. This tool parses and executes your relational algebra queries.
 
-## Key Features
+## Features
 
 - **Intuitive Query Processing**: Outputs query results in a clear, readable format.
-
 - **Efficient Execution Flow**: Traverses the query tree to perform database operations in a logical sequence.
-- **Database Integration**: Seamlessly interacts with database tables to fetch and modify data.
 - **Result Visualization**: Clearly displays query results, enhancing data analysis and interpretation.
 
 ## Supported Commands
